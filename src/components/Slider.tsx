@@ -87,7 +87,7 @@ const Slider = () => {
               current === index ? "scale-150" : ""
             }`}
             key={slide.id}
-            onClick={() => setCurrent(index)}
+            onClick={() => {setCurrent(index);console.log(index)}}
           >
             {current === index && (
               <div className="w-[6px] h-[6px] bg-gray-600 rounded-full"></div>
