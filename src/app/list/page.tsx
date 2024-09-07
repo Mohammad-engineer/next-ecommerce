@@ -1,4 +1,5 @@
 import Filter from "@/components/Filter";
+import ProductList2 from "@/components/ProductList2";
 import Image from "next/image";
 import React from "react";
 
@@ -24,7 +25,7 @@ const ListPage = () => {
       <Filter />
       {/* PRODUCTS */}
       <h1 className="mt-12 text-xl font-semibold">Shoes for you</h1>
-      {/* <ProductList /> */}
+      <ProductList2 />
     </div>
   );
 };
