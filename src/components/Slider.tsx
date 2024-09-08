@@ -46,13 +46,11 @@ const Slider = () => {
     <div className="h-[calc(100vh-80px)] overflow-hidden">
       <div
         className="w-max h-full flex transition-all ease-in-out duration-1000"
-        style={{ transform: `translateX(-${current * 100}vw)` }}
-      >
+        style={{ transform: `translateX(-${current * 100}vw)` }}>
         {slides.map((slide) => (
           <div
             className={`${slide.bg} w-screen h-full flex flex-col gap-16 xl:flex-row`}
-            key={slide.id}
-          >
+            key={slide.id}>
             {/* TEXT CONTAINER */}
             <div className="h-1/2 xl:w-1/2 xl:h-full flex flex-col items-center justify-center gap-8 2xl:gap-12 text-center">
               <h2 className="text-xl lg:text-3xl 2xl:text-5xl">
@@ -74,8 +72,7 @@ const Slider = () => {
                 alt=""
                 fill
                 sizes="100%"
-                className="object-cover"
-              />
+                className="object-cover"/>
             </div>
           </div>
         ))}
@@ -87,8 +84,7 @@ const Slider = () => {
               current === index ? "scale-150" : ""
             }`}
             key={slide.id}
-            onClick={() => {setCurrent(index);console.log(index)}}
-          >
+            onClick={() => {setCurrent(index)}}>
             {current === index && (
               <div className="w-[6px] h-[6px] bg-gray-600 rounded-full"></div>
             )}
