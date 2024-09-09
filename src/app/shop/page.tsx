@@ -1,8 +1,11 @@
 import React from 'react'
+import Loading from '../loading'
 
 const page = () => {
   return (
-    <div>shop page</div>
+    <div>shop page
+      <Loading  />
+    </div>
   )
 }
 
