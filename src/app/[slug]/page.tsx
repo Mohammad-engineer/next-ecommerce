@@ -1,7 +1,7 @@
 'use client'
-import Add from '@/components/Add'
-import CustomizeProducts from '@/components/CustomizeProducts'
-import ProductImages from '@/components/ProductImages'
+import Add from 'src/components/Add'
+import CustomizeProducts from 'src/components/CustomizeProducts'
+import ProductImages from 'src/components/ProductImages'
 import React, { useEffect } from 'react'
 
 
