@@ -1,4 +1,4 @@
-'use client';
+'use client'
 
 import { useEffect } from 'react';
 
@@ -17,7 +17,7 @@ import { CheckoutBillingAddress } from '../checkout-billing-address';
 
 // ----------------------------------------------------------------------
 
-export function CheckoutView() {
+const CheckoutView = ()=> {
   const checkout = useCheckoutContext();
 
   useEffect(() => {
@@ -31,12 +31,12 @@ export function CheckoutView() {
         Checkout
       </Typography>
 
-      <Grid container justifyContent={checkout.completed ? 'center' : 'flex-start'}>
+       <Grid container justifyContent={checkout.completed ? 'center' : 'flex-start'}>
         <Grid xs={12} md={8}>
           <CheckoutSteps activeStep={checkout.activeStep} steps={PRODUCT_CHECKOUT_STEPS} />
         </Grid>
       </Grid>
-
+      
       <>
         {checkout.activeStep === 0 && <CheckoutCart />}
 
@@ -51,3 +51,5 @@ export function CheckoutView() {
     </Container>
   );
 }
+
+export default CheckoutView

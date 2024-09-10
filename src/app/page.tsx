@@ -1,11 +1,11 @@
 'use client'
 
-import CategoryList from "@/components/CategoryList";
-import ProductList2 from "@/components/ProductList2";
-//import ProductList from "@/components/ProductList";
-import Slider from "@/components/Slider";
+import CategoryList from "src/components/CategoryList";
+import ProductList2 from "src/components/ProductList2";
+//import ProductList from "src/components/ProductList";
+import Slider from "src/components/Slider";
 import SpecialCategory from '../components/special-category.jsx'
-// import { WixClientContext } from "@/context/wixContext";
+// import { WixClientContext } from "src/context/wixContext";
 // import { useContext, useEffect } from "react";
 
 const HomePage = () => {

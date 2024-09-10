@@ -1,6 +1,6 @@
 import { CONFIG } from "../../../config-global";
 
-import CheckoutView from 'src/section/checkout/view'
+import CheckoutView from 'src/sections/checkout/view/checkout-view'
 
 // ----------------------------------------------------------------------
 

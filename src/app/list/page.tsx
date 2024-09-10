@@ -1,5 +1,5 @@
-import Filter from "@/components/Filter";
-import ProductList2 from "@/components/ProductList2";
+import Filter from "src/components/Filter";
+import ProductList2 from "src/components/ProductList2";
 import Image from "next/image";
 import React from "react";
 

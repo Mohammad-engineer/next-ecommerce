@@ -9,7 +9,7 @@ import { getStorage, useLocalStorage } from 'src/hooks/use-local-storage';
 
 import { PRODUCT_CHECKOUT_STEPS } from 'src/_mock/_product';
 
-import Loading from 'src/app/loading.jsx';
+import { SplashScreen } from 'src/components/loading-screen';
 
 // ----------------------------------------------------------------------
 
@@ -31,17 +31,18 @@ const initialState = {
 
 // ----------------------------------------------------------------------
 
-export function CheckoutProvider({ children }) {
+const CheckoutProvider = ({ children })=> {
   return (
-    <Suspense fallback={<Loading />}>
+    <Suspense fallback={<SplashScreen />}>
       <Container>{children}</Container>
     </Suspense>
   );
 }
 
+export {CheckoutProvider}
 // ----------------------------------------------------------------------
 
-function Container({ children }) {
+const Container = ({ children })=> {
   const router = useRouter();
 
   const searchParams = useSearchParams();

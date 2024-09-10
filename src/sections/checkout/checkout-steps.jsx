@@ -1,3 +1,5 @@
+'use client'
+
 import Box from '@mui/material/Box';
 import Step from '@mui/material/Step';
 import Stack from '@mui/material/Stack';
@@ -14,23 +16,23 @@ const StepConnector = styled(MuiStepConnector)(({ theme }) => ({
   top: 10,
   left: 'calc(-50% + 20px)',
   right: 'calc(50% + 20px)',
-  [`& .${stepConnectorClasses.line}`]: {
-    borderTopWidth: 2,
-    borderColor: theme.vars.palette.divider,
-  },
-  [`&.${stepConnectorClasses.active}, &.${stepConnectorClasses.completed}`]: {
-    [`& .${stepConnectorClasses.line}`]: { borderColor: theme.vars.palette.primary.main },
-  },
+  // [`& .${stepConnectorClasses.line}`]: {
+  //   borderTopWidth: 2,
+  //   borderColor: theme.vars.palette.divider,
+  // },
+  // [`&.${stepConnectorClasses.active}, &.${stepConnectorClasses.completed}`]: {
+  //   [`& .${stepConnectorClasses.line}`]: { borderColor: theme.vars.palette.primary.main },
+  // },
 }));
 
 // ----------------------------------------------------------------------
 
-export function CheckoutSteps({ steps, activeStep, sx, ...other }) {
+const CheckoutSteps = ({ steps, activeStep, sx, ...other })=> {
   return (
     <Stepper
       alternativeLabel
       activeStep={activeStep}
-      connector={<StepConnector />}
+      //connector={<StepConnector />}
       sx={{ mb: { xs: 3, md: 5 }, ...sx }}
       {...other}
     >
@@ -75,3 +77,6 @@ function StepIcon({ active, completed }) {
     </Stack>
   );
 }
+
+
+export {CheckoutSteps}

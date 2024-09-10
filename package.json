@@ -28,6 +28,7 @@
     "@wix/sdk": "^1.12.12",
     "@wix/stores": "^1.0.208",
     "dayjs": "^1.11.13",
+    "framer-motion": "^11.5.4",
     "i18next": "^23.15.1",
     "i18next-browser-languagedetector": "^8.0.0",
     "i18next-resources-to-backend": "^1.2.1",
