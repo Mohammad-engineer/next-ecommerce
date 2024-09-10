@@ -4,6 +4,7 @@ import "./globals.css";
 // import Navbar from "@/components/Navbar";
 import Navbar from "src/components/Navbar";
 import Footer from "src/components/Footer";
+import { Toaster } from "sonner";
 // import { WixClientContextProvider } from "@/context/wixContext";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -24,6 +25,7 @@ export default function RootLayout({
         {/* <WixClientContextProvider> */}
           <Navbar />
           {children}
+          <Toaster />
           <Footer />
         {/* </WixClientContextProvider> */}
       </body>
