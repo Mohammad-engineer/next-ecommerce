@@ -9,7 +9,7 @@ import { getStorage, useLocalStorage } from 'src/hooks/use-local-storage';
 
 import { PRODUCT_CHECKOUT_STEPS } from 'src/_mock/_product';
 
-import { SplashScreen } from 'src/components/loading-screen';
+import Loading from 'src/app/loading.jsx';
 
 // ----------------------------------------------------------------------
 
@@ -33,7 +33,7 @@ const initialState = {
 
 export function CheckoutProvider({ children }) {
   return (
-    <Suspense fallback={<SplashScreen />}>
+    <Suspense fallback={<Loading />}>
       <Container>{children}</Container>
     </Suspense>
   );
