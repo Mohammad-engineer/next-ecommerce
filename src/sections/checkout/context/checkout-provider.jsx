@@ -35,7 +35,7 @@ const CheckoutProvider = ({ children })=> {
   return (
     <Suspense fallback={<SplashScreen />}>
       <Container>{children}</Container>
-    </Suspense>
+     </Suspense> 
   );
 }
 

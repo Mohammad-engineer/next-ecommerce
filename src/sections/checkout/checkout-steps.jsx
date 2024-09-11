@@ -16,10 +16,10 @@ const StepConnector = styled(MuiStepConnector)(({ theme }) => ({
   top: 10,
   left: 'calc(-50% + 20px)',
   right: 'calc(50% + 20px)',
-  // [`& .${stepConnectorClasses.line}`]: {
-  //   borderTopWidth: 2,
-  //   borderColor: theme.vars.palette.divider,
-  // },
+  [`& .${stepConnectorClasses.line}`]: {
+    borderTopWidth: 2,
+    borderColor: 'red',
+  },
   // [`&.${stepConnectorClasses.active}, &.${stepConnectorClasses.completed}`]: {
   //   [`& .${stepConnectorClasses.line}`]: { borderColor: theme.vars.palette.primary.main },
   // },
@@ -32,7 +32,7 @@ const CheckoutSteps = ({ steps, activeStep, sx, ...other })=> {
     <Stepper
       alternativeLabel
       activeStep={activeStep}
-      //connector={<StepConnector />}
+      connector={<StepConnector />}
       sx={{ mb: { xs: 3, md: 5 }, ...sx }}
       {...other}
     >

@@ -2,17 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-
-.scrollbar-hide::-webkit-scrollbar{
-    display: none;
+html {
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
 }
 
-.scrollbar-hide{
-    scrollbar-width: none;
+body {
+  font-family: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
 
-
+.scrollbar-hide {
+  scrollbar-width: none;
+}
 
 .error-wrapper:after {
   content: "";
@@ -29,7 +36,7 @@
 }
 
 .error-wrapper {
-    position: relative;
+  position: relative;
   background: linear-gradient(#203075, #233581);
   overflow: hidden;
   min-height: 80vh;
@@ -46,7 +53,7 @@
   z-index: -3;
 }
 
-.error-wrapper  {
+.error-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -99,7 +106,8 @@
   box-shadow: 0 30px 15px rgba(0, 0, 0, 0.15);
   position: absolute;
 }
-.error-wrapper .bubble:before, .bubble:after {
+.error-wrapper .bubble:before,
+.bubble:after {
   content: "";
   background: linear-gradient(#ec5dc1, #d61a6f);
   border-radius: 50%;
