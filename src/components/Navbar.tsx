@@ -1,11 +1,20 @@
+'use client'
+
 import Link from "next/link";
 import React from "react";
-import Menu from "./Menu";
 import Image from "next/image";
 import SearchBar from "./SearchBar";
 import NavIcons from "./NavIcons";
+import Menu from "@mui/material/Menu";
+import MobileMenu from "./Menu";
+import { Button, MenuItem } from "@mui/material";
+import { useRouter } from "next/navigation";
+import PopupState, { bindTrigger, bindMenu } from "material-ui-popup-state";
 
 const Navbar = () => {
+  
+  const router = useRouter();
+
   return (
     <div className="h-20 px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64 relative">
       {/* Mobile */}
@@ -13,7 +22,7 @@ const Navbar = () => {
         <Link href="/">
           <div className="text-2xl tracking-wide">LAMA</div>
         </Link>
-        <Menu />
+        <MobileMenu />
       </div>
 
       {/* Bigger Screen */}
@@ -29,9 +38,26 @@ const Navbar = () => {
             <Link href="/product">Shop</Link>
             <Link href="/">Deals</Link>
             <Link href="/blog">Blog</Link>
-            <Link href="/about-us">About</Link>
-            <Link href="/contact-us">Contact</Link>
+            {/* <Link href="/about-us">About</Link>
+            <Link href="/contact-us">Contact</Link> */}
             <Link href="/dashboard">dashboard</Link>
+
+            <PopupState variant="popover" popupId="demo-popup-menu">
+              {(popupState) => (
+                <React.Fragment>
+                  <Button variant="contained" {...bindTrigger(popupState)}>
+                    pages
+                  </Button>
+                  <Menu {...bindMenu(popupState)}>
+                    <MenuItem onClick={()=>router.push('./faqs')}>Faqs</MenuItem>
+                    <MenuItem onClick={()=>router.push('./maintenance')}>Maintenance</MenuItem>
+                    <MenuItem onClick={()=>router.push('./coming-soon')}>coming-soon</MenuItem>
+                    <MenuItem onClick={()=>router.push("/about-us")}>About </MenuItem>
+                    <MenuItem onClick={()=>router.push("/contact-us")}>Contact</MenuItem>
+                  </Menu>
+                </React.Fragment>
+              )}
+            </PopupState>
           </div>
         </div>
         {/* Right */}
