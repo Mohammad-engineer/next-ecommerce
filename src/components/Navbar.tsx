@@ -26,7 +26,7 @@ const Navbar = () => {
           </Link>
           <div className="hidden xl:flex gap-4">
             <Link href="/">HomePage</Link>
-            <Link href="/shop">Shop</Link>
+            <Link href="/product">Shop</Link>
             <Link href="/">Deals</Link>
             <Link href="/blog">Blog</Link>
             <Link href="/about">About</Link>

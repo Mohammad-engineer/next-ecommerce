@@ -1,10 +1,10 @@
-import { Markdown } from 'src/components/markdown';
+// import { Markdown } from 'src/components/markdown';
 
 // ----------------------------------------------------------------------
 
 export function ProductDetailsDescription({ description }) {
   return (
-    <Markdown
+    <div
       children={description}
       sx={{
         p: 3,
