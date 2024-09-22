@@ -29,8 +29,8 @@ const Navbar = () => {
             <Link href="/product">Shop</Link>
             <Link href="/">Deals</Link>
             <Link href="/blog">Blog</Link>
-            <Link href="/about">About</Link>
-            <Link href="/contact">Contact</Link>
+            <Link href="/about-us">About</Link>
+            <Link href="/contact-us">Contact</Link>
             <Link href="/dashboard">dashboard</Link>
           </div>
         </div>

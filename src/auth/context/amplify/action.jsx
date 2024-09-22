@@ -1,14 +1,14 @@
 'use client';
 
-import {
-  signIn as _signIn,
-  signUp as _signUp,
-  signOut as _signOut,
-  confirmSignUp as _confirmSignUp,
-  resetPassword as _resetPassword,
-  resendSignUpCode as _resendSignUpCode,
-  confirmResetPassword as _confirmResetPassword,
-} from 'aws-amplify/auth';
+// import {
+//   signIn as _signIn,
+//   signUp as _signUp,
+//   signOut as _signOut,
+//   confirmSignUp as _confirmSignUp,
+//   resetPassword as _resetPassword,
+//   resendSignUpCode as _resendSignUpCode,
+//   confirmResetPassword as _confirmResetPassword,
+// } from 'aws-amplify/auth';
 
 /** **************************************
  * Sign in

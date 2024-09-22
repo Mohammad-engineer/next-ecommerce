@@ -2,7 +2,7 @@
 
 import { paths } from 'src/routes/paths';
 
-import { supabase } from 'src/lib/supabase';
+// import { supabase } from 'src/lib/supabase';
 
 /** **************************************
  * Sign in

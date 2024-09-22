@@ -1,19 +1,19 @@
 'use client';
 
-import { doc, setDoc, collection } from 'firebase/firestore';
-import {
-  signOut as _signOut,
-  signInWithPopup as _signInWithPopup,
-  GoogleAuthProvider as _GoogleAuthProvider,
-  GithubAuthProvider as _GithubAuthProvider,
-  TwitterAuthProvider as _TwitterAuthProvider,
-  sendEmailVerification as _sendEmailVerification,
-  sendPasswordResetEmail as _sendPasswordResetEmail,
-  signInWithEmailAndPassword as _signInWithEmailAndPassword,
-  createUserWithEmailAndPassword as _createUserWithEmailAndPassword,
-} from 'firebase/auth';
+// import { doc, setDoc, collection } from 'firebase/firestore';
+// import {
+//   signOut as _signOut,
+//   signInWithPopup as _signInWithPopup,
+//   GoogleAuthProvider as _GoogleAuthProvider,
+//   GithubAuthProvider as _GithubAuthProvider,
+//   TwitterAuthProvider as _TwitterAuthProvider,
+//   sendEmailVerification as _sendEmailVerification,
+//   sendPasswordResetEmail as _sendPasswordResetEmail,
+//   signInWithEmailAndPassword as _signInWithEmailAndPassword,
+//   createUserWithEmailAndPassword as _createUserWithEmailAndPassword,
+// } from 'firebase/auth';
 
-import { AUTH, FIRESTORE } from 'src/lib/firebase';
+// import { AUTH, FIRESTORE } from 'src/lib/firebase';
 
 /** **************************************
  * Sign in

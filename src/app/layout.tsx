@@ -6,7 +6,16 @@ import Footer from "src/components/Footer";
 import { Toaster } from "sonner";
 import { CONFIG } from "src/config-global";
 import { detectLanguage } from "src/locales/server";
+import { ThemeProvider } from "src/theme/theme-provider";
+import {
+  SettingsDrawer,
+  defaultSettings,
+  SettingsProvider,
+} from "src/components/settings";
 // import { WixClientContextProvider } from "@/context/wixContext";
+
+import { MotionLazy } from "src/components/animate/motion-lazy";
+import { detectSettings } from "src/components/settings/server";
 
 import { CheckoutProvider } from "src/sections/checkout/context";
 
@@ -24,16 +33,29 @@ export default async function RootLayout({
 }>) {
   const lang = CONFIG.isStaticExport ? "en" : await detectLanguage();
 
+  const settings = CONFIG.isStaticExport
+    ? defaultSettings
+    : await detectSettings();
+
   return (
     <html lang={lang ?? "en"} suppressHydrationWarning>
       <body className={inter.className}>
         {/* <WixClientContextProvider> */}
-        <Navbar />
-        <CheckoutProvider>
-          {children}
-          <Toaster />
-        </CheckoutProvider>
-        <Footer />
+        <SettingsProvider
+          settings={settings}
+          caches={CONFIG.isStaticExport ? "localStorage" : "cookie"}
+        >
+          <ThemeProvider>
+            <MotionLazy>
+              <Navbar />
+              <CheckoutProvider>
+                {children}
+                <Toaster />
+              </CheckoutProvider>
+              <Footer />
+            </MotionLazy>
+          </ThemeProvider>
+        </SettingsProvider>
         {/* </WixClientContextProvider> */}
       </body>
     </html>
