@@ -1,3 +1,5 @@
+'use client'
+
 import Box from '@mui/material/Box';
 import Pagination, { paginationClasses } from '@mui/material/Pagination';
 
@@ -6,10 +8,11 @@ import { ProductItemSkeleton } from './product-skeleton';
 
 // ----------------------------------------------------------------------
 
-export function ProductList({ products, loading, ...other }) {
+export function ProductList({ products, loading = false, ...other }) {
   const renderLoading = <ProductItemSkeleton />;
+  console.log('list :',products)
 
-  const renderList = products.map((product) => <ProductItem key={product.id} product={product} />);
+  const renderList = products.map((product) => (<ProductItem key={product.id} product={product} />));
 
   return (
     <>
@@ -24,7 +27,7 @@ export function ProductList({ products, loading, ...other }) {
         }}
         {...other}
       >
-        {loading ? renderLoading : renderList}
+        {renderList}
       </Box>
 
       {products.length > 8 && (

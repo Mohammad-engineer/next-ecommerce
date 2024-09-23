@@ -34,6 +34,7 @@ import { ProductFiltersResult } from '../product-filters-result';
 // ----------------------------------------------------------------------
 
 export function ProductShopView({ products }) {
+
   const checkout = useCheckoutContext();
 
   const openFilters = useBoolean();
@@ -138,6 +139,7 @@ export function ProductShopView({ products }) {
 }
 
 function applyFilter({ inputData, filters, sortBy }) {
+
   const { gender, category, colors, priceRange, rating } = filters;
 
   const min = priceRange[0];

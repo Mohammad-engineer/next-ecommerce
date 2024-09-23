@@ -1,7 +1,8 @@
 
 import { CONFIG } from 'src/config-global';
 
-import { CheckoutView } from '../../../sections/checkout/view/checkout-view.jsx';
+// import { CheckoutView } from '../../../sections/checkout/view/checkout-view.jsx';
+import { CheckoutView } from 'src/sections/checkout/view/checkout-view.jsx';
 
 // ----------------------------------------------------------------------
 
