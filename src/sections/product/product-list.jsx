@@ -10,7 +10,6 @@ import { ProductItemSkeleton } from './product-skeleton';
 
 export function ProductList({ products, loading = false, ...other }) {
   const renderLoading = <ProductItemSkeleton />;
-  console.log('list :',products)
 
   const renderList = products.map((product) => (<ProductItem key={product.id} product={product} />));
 

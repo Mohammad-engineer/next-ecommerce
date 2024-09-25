@@ -25,7 +25,7 @@ export const Label = forwardRef(
     };
 
     return (
-      <StyledLabel
+      <Box
         ref={ref}
         component="span"
         className={labelClasses.root}
@@ -47,7 +47,7 @@ export const Label = forwardRef(
             {endIcon}
           </Box>
         )}
-      </StyledLabel>
+      </Box>
     );
   }
 );

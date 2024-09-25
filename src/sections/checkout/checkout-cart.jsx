@@ -21,6 +21,7 @@ import { CheckoutCartProductList } from './checkout-cart-product-list';
 export function CheckoutCart() {
   const checkout = useCheckoutContext();
 
+  console.log({checkout})
   const empty = !checkout.items.length;
 
   return (

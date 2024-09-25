@@ -31,7 +31,7 @@ export function CheckoutCartProduct({ row, onDelete, onDecrease, onIncrease }) {
 
           <Stack spacing={0.5}>
             <Typography noWrap variant="subtitle2" sx={{ maxWidth: 240 }}>
-              {row.name}
+              {row?.name}
             </Typography>
 
             <Stack
@@ -41,7 +41,7 @@ export function CheckoutCartProduct({ row, onDelete, onDecrease, onIncrease }) {
             >
               size: <Label sx={{ ml: 0.5 }}> {row.size} </Label>
               <Divider orientation="vertical" sx={{ mx: 1, height: 16 }} />
-              <ColorPreview colors={row.colors} />
+              <ColorPreview colors={row?.colors} />
             </Stack>
           </Stack>
         </Stack>
