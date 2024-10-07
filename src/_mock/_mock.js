@@ -76,6 +76,7 @@ export const _mock = {
   // Image
   image: {
     cover: (index) => `${assetURL}/assets/images/cover/cover-${index + 1}.webp`,
+    category: (index) => `./assets/images/category/cat-${index + 1}.webp`,
     avatar: (index) => `${assetURL}/assets/images/avatar/avatar-${index + 1}.webp`,
     travel: (index) => `${assetURL}/assets/images/travel/travel-${index + 1}.webp`,
     course: (index) => `${assetURL}/assets/images/course/course-${index + 1}.webp`,

@@ -11,6 +11,15 @@ export const _carouselsMembers = [...Array(6)].map((_, index) => ({
 
 // ----------------------------------------------------------------------
 
+export const _categoriesMembers = [...Array(12)].map((_, index) => ({
+  id: _mock.id(index),
+  name: _mock.fullName(index),
+  role: _mock.role(index),
+  catImgUrl: _mock.image.category(index),
+}));
+
+// ----------------------------------------------------------------------
+
 export const _faqs = [...Array(8)].map((_, index) => ({
   id: _mock.id(index),
   value: `panel${index + 1}`,

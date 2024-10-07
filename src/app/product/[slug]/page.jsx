@@ -11,6 +11,7 @@ export const metadata = { title: `Product details - ${CONFIG.site.name}` };
 
 export default async function Page({ params }) {
   const { id } = params;
+  
 
   const { product } = await getProduct(id);
 
