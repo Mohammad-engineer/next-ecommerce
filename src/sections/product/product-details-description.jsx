@@ -1,10 +1,10 @@
-// import { Markdown } from 'src/components/markdown';
+import { Markdown } from 'src/components/markdown';
 
 // ----------------------------------------------------------------------
 
 export function ProductDetailsDescription({ description }) {
   return (
-    <div
+    <Markdown
       children={description}
       sx={{
         p: 3,
@@ -21,5 +21,9 @@ export function ProductDetailsDescription({ description }) {
         },
       }}
     />
+
+    // <div dangerouslySetInnerHTML={{__html: description}}>
+      
+    // </div>
   );
 }

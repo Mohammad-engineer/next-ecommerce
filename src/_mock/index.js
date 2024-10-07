@@ -22,4 +22,6 @@ export * from './_product';
 
 export * from './_overview';
 
+export * from './_productDetail';
+
 // export * from './_calendar';

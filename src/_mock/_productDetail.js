@@ -1,26 +1,4 @@
-"use client";
-import axios, { endpoints } from "src/utils/axios";
-
-import { CONFIG } from "src/config-global";
-import { getProduct } from "src/actions/product-ssr";
-
-import { ProductShopDetailsView } from "src/sections/product/view";
-import { useParams } from "next/navigation";
-
-import {_productDetail} from 'src/_mock'
-// ----------------------------------------------------------------------
-
-//export const metadata = { title: `Product details - ${CONFIG.site.name}` };
-
-export default async function Page() {
-  const prId = useParams();
-  // const { id } = params;
-  const { slug: productId } = prId;
-
-  console.log({ productId });
-
-  //const { product } = await getProduct(productId);
-  const productDetail = {
+export const productDetail = {
     id: "e99f09a7-dd88-49d5-b1c8-1daf80c2d7b2",
     gender: ["Men"],
     images: [
@@ -201,28 +179,3 @@ export default async function Page() {
     subDescription:
       "Featuring the original ripple design inspired by Japanese bullet trains, the Nike Air Max 97 lets you push your style full-speed ahead.",
   };
-
-  return <ProductShopDetailsView product={productDetail} />;
-}
-
-// ----------------------------------------------------------------------
-
-/**
- * [1] Default
- * Remove [1] and [2] if not using [2]
- */
-// const dynamic = CONFIG.isStaticExport ? 'auto' : 'force-dynamic';
-
-// export { dynamic };
-
-/**
- * [2] Static exports
- * https://nextjs.org/docs/app/building-your-application/deploying/static-exports
- */
-// export async function generateStaticParams() {
-//   if (CONFIG.isStaticExport) {
-//     const res = await axios.get(endpoints.product.list);
-//     return res.data.products.map((product) => ({ id: product.id }));
-//   }
-//   return [];
-// }

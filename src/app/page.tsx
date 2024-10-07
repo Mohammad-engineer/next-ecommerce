@@ -1,6 +1,6 @@
 'use client'
 
-import CategoryList from "src/components/CategoryList";
+// import CategoryList from "src/components/CategoryList";
 import ProductList2 from "src/components/ProductList2";
 //import ProductList from "src/components/ProductList";
 import Slider from "src/components/Slider";

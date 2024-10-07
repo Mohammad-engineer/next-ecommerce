@@ -48,7 +48,7 @@ const SUMMARY = [
 
 export function ProductShopDetailsView({ product }) {
   const checkout = useCheckoutContext();
-
+console.log('ffff')
   const tabs = useTabs('description');
 
   return (
