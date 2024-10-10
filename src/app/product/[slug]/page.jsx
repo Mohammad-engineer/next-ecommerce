@@ -17,7 +17,6 @@ export default async function Page() {
   // const { id } = params;
   const { slug: productId } = prId;
 
-  console.log({ productId });
 
   //const { product } = await getProduct(productId);
   const productDetail = {
@@ -178,7 +177,7 @@ export default async function Page() {
     price: 97.14,
     coverUrl:
       "https://api-prod-minimal-v610.pages.dev/assets/images/m-product/product-2.webp",
-    colors: ["#1890FF", "#FFC0CB"],
+    colors: ["#1890FF", "#FFC0CB","#ee3680","#80ee36","#fcf80a","#937bc1"],
     totalRatings: 3.7,
     totalSold: 684,
     totalReviews: 9124,

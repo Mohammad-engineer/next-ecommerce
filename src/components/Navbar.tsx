@@ -17,8 +17,6 @@ const Navbar = () => {
 
   const handleNavigate = (ButtonRoute: string, popupState: any)=>{
     router.push(ButtonRoute)
-
-    console.log({ButtonRoute,popupState})
     popupState.close();
   }
 

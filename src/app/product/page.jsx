@@ -8,7 +8,9 @@ import { ProductShopView } from 'src/sections/product/view';
 export const metadata = { title: `Product shop - ${CONFIG.site.name}` };
 
 export default async function Page() {
+  
   const { products } = await getProducts();
 
-  return <ProductShopView products={products} />;
+  // return <ProductShopView products={products} />;
+  return <p>hhhh</p>;
 }

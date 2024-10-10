@@ -4,7 +4,7 @@ import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
-import Grid from '@mui/material/Unstable_Grid2';
+import Grid from '@mui/material/Grid2';
 import { useTheme } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 import LinearProgress from '@mui/material/LinearProgress';
@@ -29,7 +29,6 @@ export const SKILLS = [...Array(3)].map((_, index) => ({
 
 export function AboutWhat() {
   const theme = useTheme();
-console.log({theme})
   return (
     
     <Container

@@ -60,7 +60,6 @@ export const Image = forwardRef(
     },
     ref
   ) => {
-    console.log({visibleByDefault})
     const content = (
       <Box
         component={LazyLoadImage}

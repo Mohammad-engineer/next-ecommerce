@@ -41,7 +41,7 @@ export const ColorPicker = forwardRef(
           flexDirection: 'row',
           display: 'inline-flex',
           ...(limit !== 'auto' && {
-            width: limit * 36,
+            width: limit * 46,
             justifyContent: 'flex-end',
           }),
           ...sx,
@@ -57,8 +57,8 @@ export const ColorPicker = forwardRef(
                 aria-label={color}
                 onClick={() => handleSelect(color)}
                 sx={{
-                  width: 36,
-                  height: 36,
+                  width: 46,
+                  height: 46,
                   borderRadius: '50%',
                   ...slotProps?.button,
                 }}
@@ -67,8 +67,8 @@ export const ColorPicker = forwardRef(
                   alignItems="center"
                   justifyContent="center"
                   sx={{
-                    width: 20,
-                    height: 20,
+                    width: 30,
+                    height: 30,
                     bgcolor: color,
                     borderRadius: '50%',
                     border: (theme) =>
